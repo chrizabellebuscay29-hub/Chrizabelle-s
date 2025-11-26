@@ -33,6 +33,19 @@
   max-height: 80vh; /* important: limit height so inner area can scroll */
 }
 
+
+.modal-content,
+.modal-content * {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea,
+.modal-content button {
+    font-family: inherit;
+}
+
 .modal-header {
   padding: 12px 16px;
   border-bottom: 1px solid #eee;
@@ -67,6 +80,21 @@
 .modal-body .btn {
   width: 100%;
   margin-bottom: 10px;
+}
+
+/* Make modal form controls have a blue border by default */
+.modal .input,
+.modal .select,
+.modal .textarea {
+    border: 2px solid #2563eb;
+}
+
+.modal .input:focus,
+.modal .select:focus,
+.modal .textarea:focus {
+    outline: none;
+    border-color: #1d4ed8;
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.08);
 }
 
 @media (min-width: 700px) {
@@ -225,7 +253,6 @@ h3 {
 .nav-tab-dashboard {
     background-color: #dcebff;
 }
-
 .nav-tab-dashboard.active {
     background-color: #abccf5;
 }
@@ -233,7 +260,6 @@ h3 {
 .nav-tab-workers {
     background-color: #dcebff;
 }
-
 .nav-tab-workers.active {
     background-color: #abccf5;
 }
@@ -241,7 +267,6 @@ h3 {
 .nav-tab-expenses {
     background-color: #dcebff;
 }
-
 .nav-tab-expenses.active {
     background-color: #abccf5;
 }
@@ -249,7 +274,6 @@ h3 {
 .nav-tab-harvests {
     background-color: #dcebff;
 }
-
 .nav-tab-harvests.active {
     background-color: #abccf5;
 }
@@ -257,7 +281,6 @@ h3 {
 .nav-tab-transactions {
     background-color: #dcebff;
 }
-
 .nav-tab-transactions.active {
     background-color: #abccf5;
 }
@@ -285,7 +308,7 @@ h3 {
 .card {
     background-color: rgb(194, 227, 249);
     border-radius: 0.5rem;
-    border: 1px solid #76a7e86b;
+    border: 1px solid #73a7e96b;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.814);
     transition: transform 0.3s ease, box-shadow 0.18s ease;
 }
@@ -296,7 +319,7 @@ h3 {
 }
 .stats-grid .card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(0, 135, 254, 0.614);
+    box-shadow: 0 12px 30px rgba(0, 102, 254, 0.574);
 }
 .stats-grid .card:active {
     transform: translateY(-2px);
