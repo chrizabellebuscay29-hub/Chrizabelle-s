@@ -163,6 +163,27 @@
       <div class="modal-header"><h3>Add Harvest</h3><button class="modal-close" onclick="closeHarvestDialog()"><i class="fa-solid fa-xmark"></i></button></div>
       <form id="harvest-form" class="modal-body" onsubmit="handleHarvestSubmit(event)">
         <label for="name">Full Name:</label>
+<<<<<<< Updated upstream
+=======
+        <select id="harvest-worker" class="select" placeholder="Fisherman" required></select>
+        <label for="kilo">Kilo of Fish:</label>
+        <input id="harvest-kilo" class="input" type="number" step="0.01" required />
+        <label for="price">Price per Kilo:</label>
+        <input id="harvest-price" class="input" type="number" step="0.01" required />
+        <label for="subtotal">Subtotal:</label>
+        <input id="harvest-subtotal" class="input" type="number" step="0.01" required />
+        <label for="similia">Amount of Similia:</label>
+        <input id="harvest-similia" class="input" type="number" step="0.01" required />
+        <label for="feeds">Amount of Feeds:</label>
+        <input id="harvest-feeds" class="input" type="number" step="0.01"  required />
+        <label for="expenses">Total Expenses:</label>
+        <input id="harvest-expenses" class="input" type="number" step="0.01" required />
+        <label for="profit">Profit Details:</label>
+        <input id="harvest-profit" class="input" type="number" step="0.01" required />
+        <label for="divprofit">Divided Profit:</label>
+        <input id="harvest-divprofit" class="input" type="number" step="0.01" required />
+        <label for="date">Date:</label>
+>>>>>>> Stashed changes
         <input id="harvest-date" class="input" type="date" required />
         <input id="harvest-fish" class="input" placeholder="Fish Type" required />
         <input id="harvest-quantity" class="input" type="number" placeholder="Quantity" required />
