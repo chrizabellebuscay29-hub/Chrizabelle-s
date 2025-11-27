@@ -19,11 +19,20 @@
   <!-- Header -->
   <header class="header">
     <div class="container">
-      <div class="header-content">
-        <i class="fa-solid fa-ship header-icon"></i>
-        <div>
-          <h1>Fishing Operation Manager</h1>
-          <p class="header-subtitle">Track expenses, harvests & transactions</p>
+      <div class="header-bar">
+        <div class="header-content">
+          <i class="fa-solid fa-ship header-icon"></i>
+          <div>
+            <h1>Fishing Operation Manager</h1>
+            <p class="header-subtitle">Track expenses, harvests & transactions.</p>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button id="logout-btn" class="btn btn-outline logout-btn" onclick="confirmLogout()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span class="logout-text"> Logout</span>
+          </button>
         </div>
       </div>
     </div>
@@ -33,11 +42,11 @@
   <nav class="nav">
     <div class="container">
       <div class="nav-tabs">
-        <button class="nav-tab active" data-tab="dashboard"><i class="fa-solid fa-chart-line nav-icon"></i> Dashboard</button>
-        <button class="nav-tab" data-tab="workers"><i class="fa-solid fa-user-group nav-icon"></i> Workers</button>
-        <button class="nav-tab" data-tab="expenses"><i class="fa-solid fa-money-bill nav-icon"></i> Expenses</button>
-        <button class="nav-tab" data-tab="harvests"><i class="fa-solid fa-fish nav-icon"></i> Harvests</button>
-        <button class="nav-tab" data-tab="transactions"><i class="fa-solid fa-handshake nav-icon"></i> Transactions</button>
+        <button class="nav-tab nav-tab-dashboard active" data-tab="dashboard"><i class="fa-solid fa-chart-line nav-icon"></i> Dashboard</button>
+        <button class="nav-tab nav-tab-workers" data-tab="workers"><i class="fa-solid fa-user-group nav-icon"></i> Workers</button>
+        <button class="nav-tab nav-tab-expenses" data-tab="expenses"><i class="fa-solid fa-money-bill nav-icon"></i> Expenses</button>
+        <button class="nav-tab nav-tab-harvests" data-tab="harvests"><i class="fa-solid fa-fish nav-icon"></i> Harvests</button>
+        <button class="nav-tab nav-tab-transactions" data-tab="transactions"><i class="fa-solid fa-handshake nav-icon"></i> Transactions</button>
       </div>
     </div>
   </nav>
