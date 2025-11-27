@@ -78,7 +78,7 @@
       </div>
       <div id="workers-list" class="workers-grid"></div>
     </div>
-
+    
     <!-- Expenses -->
     <div id="expenses" class="tab-content">
       <div class="page-header">
@@ -136,9 +136,22 @@
         <label for="name">Insert Picture:</label>
         <input id="worker-picture" class="input" placeholder="Picture URL" />
         <button class="btn btn-primary" type="submit">Save Worker</button>
-      </form>
+      <button type="button" class="btn btn-secondary" onclick="handleWorkerCancel()">Cancel</button>
+
+</form>
+      
     </div>
   </div>
+
+  <script>
+    function handleWorkerCancel() {
+  const form = document.getElementById("worker-form"); // make sure your form has id="worker-form"
+  form.reset(); // clears all fields
+  closeWorkerDialog(); // closes the modal/dialog
+}
+
+  </script>
+
 
   <!-- Expense -->
   <div id="expense-dialog" class="modal">
@@ -159,9 +172,19 @@
         <label for="date">Date:</label>
         <input id="expense-date" class="input" type="date" required />
         <button class="btn btn-primary" type="submit">Save Transaction</button>
+        <button type="button" class="btn btn-secondary" onclick="handleExpenseCancel()">Cancel</button>
+</form>
       </form>
     </div>
   </div>
+  <script>
+    function handleExpenseCancel() {
+  const form = document.getElementById("expense-form");
+  form.reset();       // clears all input fields
+  closeExpenseDialog(); // closes the expense dialog/modal
+}
+
+  </script>
 
   <!-- Harvest -->
   <div id="harvest-dialog" class="modal">
@@ -192,9 +215,19 @@
        
         <div id="harvest-workers" class="checkbox-group"></div>
         <button class="btn btn-primary" type="submit">Save Harvest</button>
+        <button type="button" class="btn btn-secondary" onclick="handleHarvestCancel()">Cancel</button>
+</form>
       </form>
     </div>
   </div>
+  <script>
+    function handleHarvestCancel() {
+  const form = document.getElementById("harvest-form");
+  form.reset();          // clears all fields
+  closeHarvestDialog();  // closes the harvest modal/dialog
+}
+
+  </script>
 
   <!-- Transaction -->
   <div id="transaction-dialog" class="modal">
@@ -211,9 +244,20 @@
         <label for="date">Date:</label>
         <input id="transaction-date" class="input" type="date" required />
         <button class="btn btn-primary" type="submit">Save Transaction</button>
+        <button type="button" class="btn btn-secondary" onclick="handleTransactionCancel()">Cancel</button>
+</form>
       </form>
     </div>
-  </div>
+  </div> 
+  <script>
+    function handleTransactionCancel() {
+  const form = document.getElementById("transaction-form");
+  form.reset();             // clears all input fields
+  closeTransactionDialog(); // closes the transaction modal/dialog
+}
+
+  </script>
+  
 
   <script src="script.js"></script>
 </body>
