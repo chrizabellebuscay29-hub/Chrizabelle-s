@@ -33,12 +33,6 @@
   max-height: 80vh; /* important: limit height so inner area can scroll */
 }
 
-
-.modal-content,
-.modal-content * {
-    font-family: Georgia, 'Times New Roman', serif;
-}
-
 .modal-content input,
 .modal-content select,
 .modal-content textarea,
