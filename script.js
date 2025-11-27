@@ -17,6 +17,19 @@ document.addEventListener("DOMContentLoaded", () => {
   updateWorkerSelects();
 });
 
+// Logout with confirmation: clears session storage and redirects to login.html
+function confirmLogout() {
+  const ok = window.confirm('Are you sure you want to log out?');
+  if (!ok) return;
+  try {
+    // optionally clear stored app data on logout
+    localStorage.removeItem('fishing-operation-storage');
+  } catch (e) {
+    // ignore
+  }
+  window.location.href = 'login.html';
+}
+
 // Tabs
 function initializeTabs() {
   document.querySelectorAll(".nav-tab").forEach(tab => {
@@ -66,6 +79,8 @@ function handleWorkerSubmit(e) {
   updateWorkerSelects();
   e.target.reset();
 }
+
+
 
 function handleExpenseSubmit(e) {
   e.preventDefault();
